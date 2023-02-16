@@ -36,18 +36,21 @@ vector <int> reverseList(vector <int> list) {
 	return list;
 }
 
-int main () {
+int main() {
 	vector<int> InputList;
 	int temp;
-	CountSort x;
-	RadixSort y;
 
 	// takie inputs
 	while (cin >> temp) {
 		InputList.push_back(temp);
 	}
 
-	cout << listSummer(InputList);
-	cout << listProduct(InputList);
-	cout << reverseList(InputList);
- }
+	cout << listSummer(InputList) << "\n";
+	cout << listProduct(InputList) << "\n";
+
+	vector<int> reversedList = reverseList(InputList);
+	for (int i = 0; i < InputList.size(); i++) {
+		cout << reversedList[i] << " ";
+	}
+	cout << "\n";
+}
