@@ -6,7 +6,7 @@ using namespace std;
 int listSummer(vector <int> list) {
 	int sum = 0;
 
-	for (int i = 0; int < list.size(); i++) {
+	for (int i = 0; i < list.size(); i++) {
 		sum += list[i];
 	}
 
@@ -16,14 +16,27 @@ int listSummer(vector <int> list) {
 int listProduct(vector <int> list) {
 	int product = 1;
 
-	for (int i = 0; int < list.size(); i++) {
+	for (int i = 0; i < list.size(); i++) {
 		product *= list[i];
 	}
 
 	return product;
 }
 
-int main{
+vector <int> reverseList(vector <int> list) {
+	int items_left = list.size() - 1;
+	int temp;
+	for (int ii = 0; items_left > ii; ii++) {
+		temp = list[ii];
+		list[ii] = list[items_left];
+		list[items_left] = temp;
+		items_left--;
+	}
+
+	return list;
+}
+
+int main () {
 	vector<int> InputList;
 	int temp;
 	CountSort x;
@@ -36,4 +49,5 @@ int main{
 
 	cout << listSummer(InputList);
 	cout << listProduct(InputList);
+	cout << reverseList(InputList);
  }
