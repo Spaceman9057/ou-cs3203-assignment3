@@ -4,6 +4,7 @@
 using namespace std;
 
 int listSummer(vector <int> list) {
+	// adds all the numbers in the vector up and returns the result
 	int sum = 0;
 
 	for (int i = 0; i < list.size(); i++) {
@@ -14,6 +15,7 @@ int listSummer(vector <int> list) {
 }
 
 int listProduct(vector <int> list) {
+	// multiplies all the numbers in the vector together and returns the result
 	int product = 1;
 
 	for (int i = 0; i < list.size(); i++) {
